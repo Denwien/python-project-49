@@ -1,0 +1,5 @@
+
+# Ignore test cache and temporary files
+tests/__pycache__/
+*.pyc
+
