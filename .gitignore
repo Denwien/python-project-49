@@ -1,5 +1,28 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
 
-# Ignore test cache and temporary files
-tests/__pycache__/
-*.pyc
+# Virtual environments
+.venv/
+env/
+venv/
 
+# IDE settings
+.idea/
+.vscode/
+
+# Poetry
+poetry.lock
+
+# Test and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup dirs
+*_backup/
