@@ -12,6 +12,8 @@ python = "^3.10"
 
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
+brain-even = "brain_games.games.brain_even:play_game"
+brain-calc = "brain_games.scripts.brain_calc:main"
 
 [build-system]
 requires = ["poetry-core"]
