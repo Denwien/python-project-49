@@ -61,3 +61,15 @@ Question: 3 9
 Your answer: 3
 Correct!
 Congratulations, Sam!
+$ poetry run brain-prime
+Welcome to the Brain Games!
+May I have your name? Sam
+Hello, Sam!
+Answer "yes" if given number is prime. Otherwise answer "no".
+Question: 7
+Your answer: yes
+Correct!
+Question: 4
+Your answer: yes
+'yes' is wrong answer ;(. Correct answer was 'no'.
+Let's try again, Sam!
