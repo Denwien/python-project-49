@@ -1,12 +1,5 @@
 import sys
-
-from brain_games.games import (
-    brain_calc,
-    brain_even,
-    brain_gcd,
-    brain_prime,
-    brain_progression,
-)
+from brain_games.games import brain_even, brain_calc, brain_gcd, brain_prime, brain_progression
 
 GAMES = {
     "1": brain_even,
@@ -24,18 +17,16 @@ GAME_NAMES = {
     "5": "brain-progression",
 }
 
-
 def main():
     print("Welcome to the Brain Games!")
     name = input("May I have your name? ")
     print(f"Hello, {name}!\n")
 
-    print("Available games:")
-    for key, game in GAME_NAMES.items():
-        print(f"{key} - {game}")
-    print("0 - Exit")
+    if len(sys.argv) > 1:
+        choice = sys.argv[1]
+    else:
+        choice = input("Choose a game (0-5): ").strip()
 
-    choice = input("Choose a game (0-5): ").strip()
     if choice in GAMES:
         print(f"\nYou chose {GAME_NAMES[choice]}!\n")
         GAMES[choice].play_game()
