@@ -1,11 +1,10 @@
 import sys
-from brain_games.cli import welcome_user
 from brain_games.games import (
     brain_even,
     brain_calc,
     brain_gcd,
     brain_prime,
-    brain_progression,
+    brain_progression
 )
 
 GAMES = {
@@ -25,35 +24,16 @@ GAME_NAMES = {
 }
 
 def main():
-    
-    name = None
-    game_choice = None
-    for arg in sys.argv[1:]:
-        if arg.startswith("--name="):
-            name = arg.split("=")[1]
-        elif arg.startswith("--game="):
-            game_choice = arg.split("=")[1]
+    # Проверка аргумента командной строки
+    if len(sys.argv) > 1:
+        choice = sys.argv[1].strip()
+    else:
+        print("Available games:")
+        for key, name in GAME_NAMES.items():
+            print(f"{key} - {name}")
+        print("0 - Exit")
+        choice = input("Choose a game (0-5): ").strip()
 
-    
-    if not name:
-        name = welcome_user()
-
-    print("\nAvailable games:")
-    for key, description in GAME_NAMES.items():
-        print(f"{key} - {description}")
-    print("0 - Exit")
-
-    
-    if game_choice in GAMES:
-        print(f"\nYou chose {GAME_NAMES[game_choice]}!\n")
-        GAMES[game_choice].play_game()
-        return
-    elif game_choice == "0":
-        print("Goodbye!")
-        sys.exit(0)
-
-    
-    choice = input("Choose a game (0-5): ").strip()
     if choice in GAMES:
         print(f"\nYou chose {GAME_NAMES[choice]}!\n")
         GAMES[choice].play_game()
@@ -63,7 +43,6 @@ def main():
     else:
         print("Invalid choice. Exiting.")
         sys.exit(1)
-
 
 if __name__ == "__main__":
     main()
