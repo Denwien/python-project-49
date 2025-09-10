@@ -32,12 +32,18 @@ def main():
         for key, name in GAME_NAMES.items():
             print(f"{key} - {name}")
         print("0 - Exit")
-        choice = input("Choose a game (0-5): ").strip()
-
-    if choice in GAMES:
-        print(f"\nYou chose {GAME_NAMES[choice]}!\n")
-        GAMES[choice].play_game()
-    elif choice == "0":
+choice = input("Choose a game (0-5): ").strip()
+if choice in GAMES:
+    print(f"
+You chose {GAME_NAMES[choice]}!
+")
+    GAMES[choice].play_game()
+elif choice == "0":
+    print("Goodbye!")
+    sys.exit(0)
+else:
+    print("Invalid choice. Exiting.")
+    sys.exit(1)
         print("Goodbye!")
         sys.exit(0)
     else:
