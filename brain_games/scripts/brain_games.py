@@ -1,10 +1,11 @@
 import sys
+
 from brain_games.games import (
-    brain_even,
     brain_calc,
+    brain_even,
     brain_gcd,
     brain_prime,
-    brain_progression
+    brain_progression,
 )
 
 GAMES = {
@@ -16,39 +17,35 @@ GAMES = {
 }
 
 GAME_NAMES = {
-    "1": "brain-even (check if number is even)",
-    "2": "brain-calc (simple math calculations)",
-    "3": "brain-gcd (greatest common divisor)",
-    "4": "brain-prime (check if number is prime)",
-    "5": "brain-progression (find missing number in progression)",
+    "1": "brain-even",
+    "2": "brain-calc",
+    "3": "brain-gcd",
+    "4": "brain-prime",
+    "5": "brain-progression",
 }
 
+
 def main():
-    # Проверка аргумента командной строки
-    if len(sys.argv) > 1:
-        choice = sys.argv[1].strip()
-    else:
-        print("Available games:")
-        for key, name in GAME_NAMES.items():
-            print(f"{key} - {name}")
-        print("0 - Exit")
-choice = input("Choose a game (0-5): ").strip()
-if choice in GAMES:
-    print(f"
-You chose {GAME_NAMES[choice]}!
-")
-    GAMES[choice].play_game()
-elif choice == "0":
-    print("Goodbye!")
-    sys.exit(0)
-else:
-    print("Invalid choice. Exiting.")
-    sys.exit(1)
+    print("Welcome to the Brain Games!")
+    name = input("May I have your name? ")
+    print(f"Hello, {name}!\n")
+
+    print("Available games:")
+    for key, game in GAME_NAMES.items():
+        print(f"{key} - {game}")
+    print("0 - Exit")
+
+    choice = input("Choose a game (0-5): ").strip()
+    if choice in GAMES:
+        print(f"\nYou chose {GAME_NAMES[choice]}!\n")
+        GAMES[choice].play_game()
+    elif choice == "0":
         print("Goodbye!")
         sys.exit(0)
     else:
         print("Invalid choice. Exiting.")
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
