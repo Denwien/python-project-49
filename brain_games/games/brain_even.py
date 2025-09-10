@@ -7,7 +7,8 @@ def is_even(number):
 def get_question():
     return random.randint(1, 100)
 
-def play_game():
+def play():
+    """Запуск игры brain-even"""
     name = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
 
@@ -23,7 +24,7 @@ def play_game():
             correct_answers += 1
         else:
             print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
-            print("Let's try again!")
-            return
-
-    print(f"Congratulations, {name}!")
+            print(f"Let's try again, {name}!")
+            break
+    else:
+        print(f"Congratulations, {name}!")
