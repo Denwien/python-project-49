@@ -1,0 +1,23 @@
+name: hexlet-check
+
+on:
+  push:
+    branches:
+      - '**'
+    tags:
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Python dependencies with UV
+        run: |
+          python3 -m pip install uv
+
+      - name: Run tests with UV
+        run: |
+          uv install
+          uv run test
