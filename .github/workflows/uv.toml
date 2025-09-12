@@ -1,0 +1,5 @@
+[tool.uv]
+name = "python-project-49"
+
+[tool.uv.dependencies]
+python = ">=3.10"
