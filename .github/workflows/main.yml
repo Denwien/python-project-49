@@ -1,0 +1,2 @@
+- name: Install dependencies
+  run: uv pip install
