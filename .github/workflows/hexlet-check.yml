@@ -6,18 +6,26 @@ on:
       - '**'
     tags:
       - '**'
+  pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Python dependencies with UV
-        run: |
-          python3 -m pip install uv
-          uv pip install --requirements requirements.txt
+      - name: Setup Python 3.13
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.13"
 
-      - name: Run tests with UV
-        run: |
-          PYTHONPATH=. uv run pytest -vv
+      - name: Install UV
+        run: python3 -m pip install --user uv
+
+      - name: Install dependencies
+        run: uv pip install --requirements requirements.txt
+
+      - name: Run tests
+        run: PYTHONPATH=. uv run pytest -vv
+

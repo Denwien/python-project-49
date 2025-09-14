@@ -16,8 +16,8 @@ jobs:
       - name: Install Python dependencies with UV
         run: |
           python3 -m pip install uv
+          uv pip install --requirements requirements.txt
 
       - name: Run tests with UV
         run: |
-          uv pip install
-          uv run test
+          PYTHONPATH=. uv run pytest -vv

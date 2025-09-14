@@ -19,11 +19,12 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Install uv
-        run: pip install uv
+      - name: Install UV
+        run: python3 -m pip install --user uv
 
       - name: Install dependencies
         run: uv pip install --requirements requirements.txt
 
       - name: Run tests
         run: PYTHONPATH=. uv run pytest -vv
+
