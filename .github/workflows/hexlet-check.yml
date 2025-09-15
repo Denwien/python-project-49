@@ -1,3 +1,4 @@
+
 name: hexlet-check
 
 on:
@@ -18,7 +19,7 @@ jobs:
 
       - run: |
           uv venv
-          uv pip install --requirements requirements.txt
+          uv sync
 
       - run: |
           PYTHONPATH=$(pwd) uv run pytest -vv tests
