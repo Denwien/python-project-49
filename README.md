@@ -1,75 +1,23 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Denwien/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Denwien/python-project-49/actions)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Denwien_python-project-49&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Denwien_python-project-49)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Denwien_python-project-49&metric=bugs)](https://sonarcloud.io/summary/new_code?id=Denwien_python-project-49)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Denwien_python-project-49&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=Denwien_python-project-49)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Denwien_python-project-49&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=Denwien_python-project-49)
 
-$ poetry run brain-even
-Welcome to the Brain Games!
-May I have your name? Sam
-Hello, Sam!
-Answer "yes" if the number is even, otherwise answer "no".
-Question: 7
-Your answer: no
-Correct!
-Question: 4
-Your answer: yes
-Correct!
-Congratulations, Sam!
-Brain Calc
-bash
-Копировать код
-$ poetry run brain-calc
-Welcome to the Brain Games!
-$ poetry run brain-progression
-Welcome to the Brain Games!
-May I have your name? Sam
-Hello, Sam!
-What number is missing in the progression?
-Question: 5 7 9 11 13 .. 17 19 21 23
-Your answer: 15
-Correct!
-Question: 2 5 8 .. 14 17 20 23 26 29
-Your answer: 11
-Correct!
-Question: 14 19 24 29 34 39 44 49 54 ..
-Your answer: 59
-Correct!
-Congratulations, Sam!
-May I have your name? Sam
-Hello, Sam!
-What is the result of the expression?
-Question: 3 * 5
-Your answer: 15
-Correct!
-Question: 10 - 4
-Your answer: 6
-Correct!
-Congratulations, Sam!
-Brain GCD
-bash
-Копировать код
-$ poetry run brain-gcd
-Welcome to the Brain Games!
-May I have your name? Sam
-Hello, Sam!
-Find the greatest common divisor of given numbers.
-Question: 25 50
-Your answer: 25
-Correct!
-Question: 100 52
-Your answer: 4
-Correct!
-Question: 3 9
-Your answer: 3
-Correct!
-Congratulations, Sam!
-$ poetry run brain-prime
-Welcome to the Brain Games!
-May I have your name? Sam
-Hello, Sam!
-Answer "yes" if given number is prime. Otherwise answer "no".
-Question: 7
-Your answer: yes
-Correct!
-Question: 4
-Your answer: yes
-'yes' is wrong answer ;(. Correct answer was 'no'.
-Let's try again, Sam!
+# Brain Games
+
+Набор консольных игр для тренировки логики и математики.  
+
+## Минимальные требования
+
+- Python >= 3.10
+- uv
+
+## Установка
+
+```bash
+git clone https://github.com/Denwien/python-project-49.git
+cd python-project-49
+make install
+
