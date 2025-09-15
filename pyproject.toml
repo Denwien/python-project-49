@@ -1,0 +1,14 @@
+[project]
+name = "brain-games"
+version = "0.1.0"
+description = "Набор консольных игр для тренировки логики и математики"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Your Name", email = "you@example.com" }
+]
+
+dependencies = [
+    "pytest>=7.0"
+]
+
