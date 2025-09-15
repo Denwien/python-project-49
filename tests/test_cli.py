@@ -1,12 +1,14 @@
-import builtins
-import pytest
-from brain_games import cli
+import subprocess
 
-def test_welcome_user(monkeypatch, capsys):
-    # подменяем ввод имени
-    monkeypatch.setattr("builtins.input", lambda prompt="": "Tester")
-    name = cli.welcome_user()
-    captured = capsys.readouterr()
-    # проверяем, что приветствие напечатано и функция возвращает имя
-    assert "Welcome to the Brain Games!" in captured.out or "May I have your name" in captured.out
-    assert name == "Tester"
+def test_cli_welcome():
+    # Запуск скрипта cli.py и подмена ввода имени "Tester"
+    result = subprocess.run(
+        ["python", "brain_games/scripts/cli.py"],
+        capture_output=True,
+        text=True,
+        input="Tester\n"
+    )
+    # Проверяем, что приветствие присутствует в stdout
+    assert "Welcome to the Brain Games!" in result.stdout
+    # Проверяем, что имя пользователя присутствует в stdout
+    assert "Tester" in result.stdout
