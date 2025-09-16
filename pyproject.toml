@@ -1,15 +1,9 @@
 [project]
 name = "hexlet-code"
 version = "0.1.0"
-description = "Набор консольных игр Brain Games"
+description = "Brain Games – консольные игры для тренировки логики"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = []
-
-[project.optional-dependencies]
-dev = [
-    "pytest",
-]
 
 [build-system]
 requires = ["hatchling"]
@@ -18,10 +12,7 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 packages = ["brain_games"]
 
-[tool.pytest.ini_options]
-addopts = "-vv"
-testpaths = ["tests"]
-
-[tool.ruff]
-line-length = 88
-target-version = "py310"
+[tool.uv]
+dev-dependencies = [
+    "pytest",
+]
