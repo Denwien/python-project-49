@@ -1,4 +1,4 @@
-name: Python CI
+name: Python CI with UV and SonarCloud
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-  sonarcloud:
+  build-and-analyze:
     runs-on: ubuntu-latest
 
     steps:
