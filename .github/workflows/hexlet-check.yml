@@ -13,11 +13,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Python dependencies with UV
+      - name: Install UV
+        run: python3 -m pip install --user uv
+
+      - name: Create virtual environment and sync dependencies
         run: |
-          python3 -m pip install uv
-          uv pip install --requirements requirements.txt
+          uv venv --clear
+          uv sync
 
       - name: Run tests with UV
         run: |
           PYTHONPATH=. uv run pytest -vv
+
