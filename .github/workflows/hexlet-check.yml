@@ -1,4 +1,3 @@
-
 name: hexlet-check
 
 on:
@@ -11,16 +10,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
-      - run: python3 -m pip install --user uv
+      - name: Install Python dependencies with UV
+        run: |
+          python3 -m pip install uv
+          uv pip install --requirements requirements.txt
 
-      - run: |
-          uv venv
-          uv sync
-
-      - run: |
-          PYTHONPATH=$(pwd) uv run pytest -vv tests
-
+      - name: Run tests with UV
+        run: |
+          PYTHONPATH=. uv run pytest -vv
