@@ -13,19 +13,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Python dependencies with UV
+      - name: Install UV
+        run: python3 -m pip install --user uv
+
+      - name: Create virtual environment and sync dependencies
         run: |
-          python3 -m pip install uv
+          uv venv --clear
           uv sync
 
       - name: Run tests with UV
         run: |
           PYTHONPATH=. uv run pytest -vv
-
-      - name: SonarCloud Scan
-        uses: sonarsource/sonarqube-scan-action@v5.0.0
-        with:
-          args: >
-            -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
-            -Dsonar.organization=${{ secrets.SONAR_ORG }}
-            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
