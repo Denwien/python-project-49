@@ -11,21 +11,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      # 1️⃣ Клонируем репозиторий
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v4
+      # 2️⃣ Устанавливаем Python
+      - name: Setup Python
+        uses: actions/setup-python@v4
         with:
           python-version: "3.11"
 
-      - run: python3 -m pip install --user uv
+      # 3️⃣ Устанавливаем uv
+      - name: Install uv
+        run: python3 -m pip install --user uv
 
-      - run: |
+      # 4️⃣ Создаём виртуальное окружение и устанавливаем зависимости через uv
+      - name: Setup virtual environment
+        run: |
           uv venv
-          uv pip install --requirements requirements.txt
+          uv install
 
-      - run: |
+      # 5️⃣ Запускаем тесты через uv
+      - name: Run tests
+        run: |
           PYTHONPATH=$(pwd) uv run pytest -vv tests
 
+      # 6️⃣ SonarCloud Scan
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
         with:
