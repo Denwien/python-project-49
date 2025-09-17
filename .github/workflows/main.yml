@@ -7,15 +7,15 @@ on:
   pull_request:
 
 jobs:
-  test:
+  test-and-analyze:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v4
         with:
-          python-version: "3.13"
+          python-version: "3.11"
 
       - run: python3 -m pip install --user uv
 
@@ -26,4 +26,11 @@ jobs:
       - run: |
           PYTHONPATH=$(pwd) uv run pytest -vv tests
 
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@master
+        with:
+          args: >
+            -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
+            -Dsonar.organization=${{ secrets.SONAR_ORG }}
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
