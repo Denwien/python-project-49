@@ -37,4 +37,3 @@ jobs:
             -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
             -Dsonar.organization=${{ secrets.SONAR_ORG }}
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
-
