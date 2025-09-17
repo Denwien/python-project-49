@@ -7,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-  test-and-analyze:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,7 +21,7 @@ jobs:
 
       - run: |
           uv venv
-          uv sync || echo "⚠ Нет зависимостей, пропускаем установку"
+          uv sync
 
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
@@ -30,4 +30,3 @@ jobs:
             -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
             -Dsonar.organization=${{ secrets.SONAR_ORG }}
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
-
