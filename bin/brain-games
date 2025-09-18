@@ -1,1 +1,10 @@
-#!/usr/bin/env python3\n"""CLI-скрипт для запуска Brain Games."""\n\nfrom brain_games.cli import welcome_user\n\n\ndef main():\n    welcome_user()\n\n\nif __name__ == "__main__":\n    main()
+#!/usr/bin/env python3
+"""CLI-скрипт для запуска Brain Games."""
+
+from brain_games.cli import welcome_user
+
+def main():
+    welcome_user()
+
+if __name__ == "__main__":
+    main()
