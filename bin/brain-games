@@ -1,6 +1,13 @@
-#!/bin/bash
-GAME_NAME="$1"
-[ -z "$GAME_NAME" ] && echo "Usage: $0 <game_name>" && exit 1
-GAME_PATH="../brain_games/games/$GAME_NAME.py"
-[ ! -f "$GAME_PATH" ] && echo "Error: Game '$GAME_NAME' not found at $GAME_PATH" && exit 1
-python3 "$GAME_PATH"
+#!/usr/bin/env python3
+import os
+import sys
+
+games_dir = os.path.join(os.path.dirname(__file__), '..', 'brain_games', 'games')
+game_files = [f for f in os.listdir(games_dir) if f.endswith('.py') and f != '__init__.py']
+
+for game in game_files:
+    file_path = os.path.join(games_dir, game)
+    if not os.path.exists(file_path):
+        print(f"Error: {file_path} does not exist")
+        sys.exit(1)
+print("All game files exist!")
