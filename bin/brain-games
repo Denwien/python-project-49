@@ -3,11 +3,18 @@ import os
 import sys
 
 games_dir = os.path.join(os.path.dirname(__file__), '..', 'brain_games', 'games')
+games_dir = os.path.abspath(games_dir)
+
 game_files = [f for f in os.listdir(games_dir) if f.endswith('.py') and f != '__init__.py']
 
+missing_files = []
 for game in game_files:
     file_path = os.path.join(games_dir, game)
     if not os.path.exists(file_path):
-        print(f"Error: {file_path} does not exist")
-        sys.exit(1)
+        missing_files.append(game)
+
+if missing_files:
+    print("Missing game files:", ", ".join(missing_files))
+    sys.exit(1)
+
 print("All game files exist!")
