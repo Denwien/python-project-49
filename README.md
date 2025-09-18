@@ -1,4 +1,5 @@
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Denwien_python-project-49&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=Denwien_python-project-49)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=denwien&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=denwien)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Denwien_python-project-49&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=Denwien_python-project-49)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Denwien_python-project-49&metric=bugs)](https://sonarcloud.io/summary/new_code?id=Denwien_python-project-49)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Denwien_python-project-49&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=Denwien_python-project-49)
