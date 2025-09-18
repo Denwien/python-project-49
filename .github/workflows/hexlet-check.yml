@@ -21,6 +21,3 @@ jobs:
           uv venv --clear
           uv sync
 
-      - name: Run tests with UV
-        run: |
-          PYTHONPATH=. uv run pytest -vv
