@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Скрипт запускает игры из brain_games
+PYTHONPATH=. uv run brain_games
