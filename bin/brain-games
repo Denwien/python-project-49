@@ -1,3 +1,6 @@
-#!/usr/bin/env bash
-# Скрипт запускает игры из brain_games
-PYTHONPATH=. uv run brain_games
+#!/bin/bash
+GAME_NAME="$1"
+[ -z "$GAME_NAME" ] && echo "Usage: $0 <game_name>" && exit 1
+GAME_PATH="../brain_games/games/$GAME_NAME.py"
+[ ! -f "$GAME_PATH" ] && echo "Error: Game '$GAME_NAME' not found at $GAME_PATH" && exit 1
+python3 "$GAME_PATH"
