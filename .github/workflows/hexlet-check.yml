@@ -13,11 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install UV
-        run: python3 -m pip install --user uv
-
-      - name: Create virtual environment and sync dependencies
-        run: |
-          uv venv --clear
-          uv sync
+      - name: Hexlet project check
+        uses: hexlet/project-action@release
+        with:
+          hexlet-id: ${{ secrets.HEXLET_ID }}
 
