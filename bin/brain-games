@@ -1,2 +1,1 @@
-#!/usr/bin/env python3
-print("Hello, Brain Games!")
+#!/usr/bin/env python3; import sys, importlib; games=["brain_calc","brain_even","brain_gcd","brain_progression","brain_prime"]; args=sys.argv[1:]; g=args[0] if args and args[0] in [x.split("_")[1] for x in games] else None; (lambda g: importlib.import_module(f"brain_games.games.brain_{g}").play() if g else print("Usage: brain-games <calc|even|gcd|progression|prime>"))(g)
