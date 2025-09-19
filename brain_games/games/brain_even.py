@@ -3,7 +3,6 @@ def generate_round():
     answer = "even"
     return question, answer
 
-    import random
 from brain_games.cli import welcome_user
 
 def is_even(number):
