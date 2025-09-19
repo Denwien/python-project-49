@@ -1,18 +1,29 @@
-.PHONY: install test lint clean
-
-# Создать/пересоздать виртуальное окружение и установить зависимости через uv
 install:
-	uv venv --clear || true
 	uv sync
 
-# Запустить тесты
-test:
-	uv run pytest -vv
+brain-games:
+	uv run brain-games
 
-# Запустить линтер (если настроен в проекте, например ruff/flake8)
+brain-even:
+	uv run brain-even
+
+brain-calc:
+	uv run brain-calc
+
+brain-gcd:
+	uv run brain-gcd
+
+brain-progression:
+	uv run brain-progression
+
+brain-prime:
+	uv run brain_prime
+
+build:
+	uv build
+
+package-install:
+	uv tool install dist/*.whl
+
 lint:
-	uv run ruff check . || uv run flake8 .
-
-# Удалить виртуальное окружение
-clean:
-	rm -rf .venv
+	uv run ruff check brain_games
