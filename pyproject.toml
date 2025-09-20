@@ -1,10 +1,12 @@
 [project]
 name = "hexlet-code"
 version = "0.1.0"
-description = "Brain Games – консольные игры для тренировки логики"
+description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.10"
-
+requires-python = ">=3.13"
+dependencies = [
+    "prompt>=0.4.1",
+]
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
@@ -12,9 +14,9 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 packages = ["brain_games"]
 
-[tool.uv]
-dev-dependencies = [
-    "pytest",
+[dependency-groups]
+dev = [
+    "ruff>=0.9.9",
 ]
 
 [project.scripts]
