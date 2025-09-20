@@ -1,19 +1,24 @@
+import operator
+import random
+
+from brain_games.cli import welcome_user
+
+
 def generate_round():
     question = "2 + 2"
     answer = "4"
     return question, answer
 
-import random
-from brain_games.cli import welcome_user
-import operator
 
 OPS = {'+': operator.add, '-': operator.sub, '*': operator.mul}
+
 
 def get_question():
     num1 = random.randint(1, 20)
     num2 = random.randint(1, 20)
     op = random.choice(list(OPS.keys()))
     return num1, num2, op
+
 
 def play():
     name = welcome_user()
@@ -28,7 +33,12 @@ def play():
             print("Correct!")
             correct_answers += 1
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(f"'{answer}' is wrong answer ;(. "
+                  f"Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {name}!")
             return
     print(f"Congratulations, {name}!")
+
+
+def main():
+    play()

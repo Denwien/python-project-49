@@ -1,10 +1,13 @@
+import random
+
+from brain_games.cli import welcome_user
+
+
 def generate_round():
     question = "3"
     answer = "yes"
     return question, answer
 
-import random
-from brain_games.cli import welcome_user
 
 def is_prime(n):
     if n < 2:
@@ -14,8 +17,10 @@ def is_prime(n):
             return False
     return True
 
+
 def get_question():
     return random.randint(1, 100)
+
 
 def play():
     name = welcome_user()
@@ -30,7 +35,12 @@ def play():
             print("Correct!")
             correct_answers += 1
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(f"'{answer}' is wrong answer ;(. "
+                  f"Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {name}!")
             return
     print(f"Congratulations, {name}!")
+
+
+def main():
+    play()
