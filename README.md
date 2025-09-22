@@ -46,7 +46,7 @@ uv sync
 
 ## Запуск игр
 
-Игры можно запускать напрямую из \`scripts/\`:
+Игры можно запускать напрямую из \`brain_games/games/\`:
 
 \`\`\`bash
 python3 brain_games/games/brain-even.py
