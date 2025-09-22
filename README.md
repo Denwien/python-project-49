@@ -49,11 +49,12 @@ uv sync
 Игры можно запускать напрямую из \`scripts/\`:
 
 \`\`\`bash
-python brain_games/scripts/brain-even.py
-python brain_games/scripts/brain-calc.py
-python brain_games/scripts/brain-gcd.py
-python brain_games/scripts/brain-progression.py
-python brain_games/scripts/brain-prime.py
+python3 brain_games/games/brain-even.py
+python3 brain_games/games/brain-calc.py
+python3 brain_games/games/brain-gcd.py
+python3 brain_games/games/brain-progression.py
+python3 brain_games/games/brain-prime.py
+
 \`\`\`
 
 ## Демонстрация
