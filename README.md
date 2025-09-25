@@ -60,16 +60,16 @@ python3 brain_games/games/brain-prime.py
 ## Демонстрация
 
 ### Brain Even
-[![asciicast](https://asciinema.org/a/XXXXXXXX.svg)](https://asciinema.org/a/XXXXXXXX)
+https://asciinema.org/a/oj9UIEVXkhP2RMPvVx3DH2oEw
 
 ### Brain Calc
-[![asciicast](https://asciinema.org/a/YYYYYYYY.svg)](https://asciinema.org/a/YYYYYYYY)
+https://asciinema.org/a/RY0ZcdTt9JMoNKDtVIWkihKOe
 
 ### Brain GCD
-[![asciicast](https://asciinema.org/a/ZZZZZZZZ.svg)](https://asciinema.org/a/ZZZZZZZZ)
+https://asciinema.org/a/bfIL8UjlNIAx8gkJKL65MLf6v
 
 ### Brain Progression
-[![asciicast](https://asciinema.org/a/AAAAAAAA.svg)](https://asciinema.org/a/AAAAAAAA)
+https://asciinema.org/a/1ROrgSqJXsvL2jmNf8m3Iq1TR
 
 ### Brain Prime
-[![asciicast](https://asciinema.org/a/BBBBBBBB.svg)](https://asciinema.org/a/BBBBBBBB)
+https://asciinema.org/a/gLGymi2DXeOTbOX5VCbVkolH1
