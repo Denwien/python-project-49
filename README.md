@@ -12,7 +12,7 @@
 
 ## Структура проекта
 
-\`\`\`
+```
 brain_games/
 ├── __init__.py
 ├── scripts/
@@ -28,7 +28,7 @@ brain_games/
     ├── brain_gcd.py
     ├── brain_prime.py
     └── brain_progression.py
-\`\`\`
+```
 
 ## Минимальные требования
 
@@ -37,25 +37,25 @@ brain_games/
 
 ## Установка
 
-\`\`\`bash
+```
 git clone https://github.com/Denwien/python-project-49.git
 cd python-project-49
 uv lock
 uv sync
-\`\`\`
+```
 
 ## Запуск игр
 
 Игры можно запускать напрямую из \`brain_games/games/\`:
 
-\`\`\`bash
+```bash
 python3 brain_games/games/brain-even.py
 python3 brain_games/games/brain-calc.py
 python3 brain_games/games/brain-gcd.py
 python3 brain_games/games/brain-progression.py
 python3 brain_games/games/brain-prime.py
 
-\`\`\`
+```
 
 ## Демонстрация
 
