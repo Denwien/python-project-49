@@ -1,5 +1,4 @@
 ### Hexlet tests and linter status:
-
 [![Actions Status](https://github.com/Denwien/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Denwien/python-project-49/actions)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Denwien_python-project-49&metric=bugs)](https://sonarcloud.io/summary/new_code?id=Denwien_python-project-49)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Denwien_python-project-49&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=Denwien_python-project-49)
@@ -7,7 +6,7 @@
 
 # Brain Games
 
-Набор консольных мини-игр для тренировки логики и математических навыков.
+Набор консольных мини-игр для тренировки логики и математических навыков.  
 Игрок отвечает на вопросы — после трёх правильных ответов подряд игра считается пройденной.
 
 ## Игры
@@ -50,19 +49,20 @@ brain-prime
 ```
 brain_games/
 ├── __init__.py
-├── scripts/
+├── scripts/          # точки входа (entry points)
 │   ├── __init__.py
 │   ├── brain_calc.py
 │   ├── brain_even.py
 │   ├── brain_gcd.py
 │   ├── brain_prime.py
 │   └── brain_progression.py
-└── games/
+└── games/            # логика игр
     ├── brain_calc.py
     ├── brain_even.py
     ├── brain_gcd.py
     ├── brain_prime.py
-    └── brain_progression.py
+    ├── brain_progression.py
+    └── brain_games.py
 ```
 
 ## Демонстрация

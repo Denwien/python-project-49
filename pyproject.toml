@@ -1,13 +1,13 @@
 [project]
 name = "hexlet-code"
 version = "0.1.0"
-description = "Add your description here"
+description = "A set of console mini-games to train logic and math skills"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "asciinema>=2.4.0",
     "prompt>=0.4.1",
 ]
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
