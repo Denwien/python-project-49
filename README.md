@@ -54,13 +54,13 @@ brain-prime
 [![asciicast](https://asciinema.org/a/RY0ZcdTt9JMoNKDtVIWkihKOe.png)](https://asciinema.org/a/RY0ZcdTt9JMoNKDtVIWkihKOe)
 
 ### Brain GCD
-[![asciicast](https://asciinema.org/a/bfIL8UjlNIAx8gkJKL65MLf6v.png)](https://asciinema.org/a/bfIL8UjlNIAx8gkJKL65MLf6v)
+[![asciicast](https://asciinema.org/a/bfIL8UjlNIAx8gkJKL65MLf6v.svg)](https://asciinema.org/a/bfIL8UjlNIAx8gkJKL65MLf6v)
 
 ### Brain Progression
 [![asciicast](https://asciinema.org/a/1ROrgSqJXsvL2jmNf8m3Iq1TR.png)](https://asciinema.org/a/1ROrgSqJXsvL2jmNf8m3Iq1TR)
 
 ### Brain Prime
-[![asciicast](https://asciinema.org/a/gLGymi2DXeOTbOX5VCbVkolH1.png)](https://asciinema.org/a/gLGymi2DXeOTbOX5VCbVkolH1)
+[![asciicast](https://asciinema.org/a/gLGymi2DXeOTbOX5VCbVkolH1.svg)](https://asciinema.org/a/gLGymi2DXeOTbOX5VCbVkolH1)
 
 ---
 
