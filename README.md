@@ -5,19 +5,20 @@
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Denwien_python-project-49&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=Denwien_python-project-49)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Denwien_python-project-49&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=Denwien_python-project-49)
 
-> A collection of five CLI mini-games that challenge your math and logic skills. Answer three questions in a row correctly — and you win!
+> A collection of five CLI mini-games that challenge your math and logic skills.  
+> Answer three questions correctly in a row to win.
 
 ---
 
 ## 🎮 Games
 
 | Game | Description |
-|------|-------------|
-| **Brain Even** | Is the number even or odd? |
+|-----|-------------|
+| **Brain Even** | Determine if a number is even |
 | **Brain Calc** | Solve a random arithmetic expression |
 | **Brain GCD** | Find the greatest common divisor |
-| **Brain Progression** | Fill in the missing number in a sequence |
-| **Brain Prime** | Determine if a number is prime |
+| **Brain Progression** | Find the missing number in a progression |
+| **Brain Prime** | Determine whether a number is prime |
 
 ---
 
@@ -26,70 +27,53 @@
 ### Requirements
 
 - Python >= 3.10
-- [uv](https://github.com/astral-sh/uv)
+- uv
 
 ### Installation
 
-    git clone https://github.com/Denwien/python-project-49.git
-    cd python-project-49
-    uv sync
+git clone https://github.com/Denwien/python-project-49.git  
+cd python-project-49  
+uv sync
 
-### Run a game
+### Run the games
 
-    python3 brain_games/games/brain_even.py
-    python3 brain_games/games/brain_calc.py
-    python3 brain_games/games/brain_gcd.py
-    python3 brain_games/games/brain_progression.py
-    python3 brain_games/games/brain_prime.py
-
----
-
-## 📁 Project Structure
-
-    brain_games/
-    ├── scripts/          # Entry points
-    │   ├── brain_calc.py
-    │   ├── brain_even.py
-    │   ├── brain_gcd.py
-    │   ├── brain_prime.py
-    │   └── brain_progression.py
-    └── games/            # Game logic
-        ├── brain_calc.py
-        ├── brain_even.py
-        ├── brain_gcd.py
-        ├── brain_prime.py
-        └── brain_progression.py
+brain-even  
+brain-calc  
+brain-gcd  
+brain-progression  
+brain-prime  
 
 ---
 
 ## 🎬 Demo
 
 ### Brain Even
-[![asciicast](https://asciinema.org/a/oj9UIEVXkhP2RMPvVx3DH2oEw.svg)](https://asciinema.org/a/oj9UIEVXkhP2RMPvVx3DH2oEw)
+[![asciicast](https://asciinema.org/a/oj9UIEVXkhP2RMPvVx3DH2oEw.png)](https://asciinema.org/a/oj9UIEVXkhP2RMPvVx3DH2oEw)
 
 ### Brain Calc
-[![asciicast](https://asciinema.org/a/RY0ZcdTt9JMoNKDtVIWkihKOe.svg)](https://asciinema.org/a/RY0ZcdTt9JMoNKDtVIWkihKOe)
+[![asciicast](https://asciinema.org/a/RY0ZcdTt9JMoNKDtVIWkihKOe.png)](https://asciinema.org/a/RY0ZcdTt9JMoNKDtVIWkihKOe)
 
 ### Brain GCD
-[![asciicast](https://asciinema.org/a/bfIL8UjlNIAx8gkJKL65MLf6v.svg)](https://asciinema.org/a/bfIL8UjlNIAx8gkJKL65MLf6v)
+[![asciicast](https://asciinema.org/a/bfIL8UjlNIAx8gkJKL65MLf6v.png)](https://asciinema.org/a/bfIL8UjlNIAx8gkJKL65MLf6v)
 
 ### Brain Progression
-[![asciicast](https://asciinema.org/a/1ROrgSqJXsvL2jmNf8m3Iq1TR.svg)](https://asciinema.org/a/1ROrgSqJXsvL2jmNf8m3Iq1TR)
+[![asciicast](https://asciinema.org/a/1ROrgSqJXsvL2jmNf8m3Iq1TR.png)](https://asciinema.org/a/1ROrgSqJXsvL2jmNf8m3Iq1TR)
 
 ### Brain Prime
-[![asciicast](https://asciinema.org/a/gLGymi2DXeOTbOX5VCbVkolH1.svg)](https://asciinema.org/a/gLGymi2DXeOTbOX5VCbVkolH1)
+[![asciicast](https://asciinema.org/a/gLGymi2DXeOTbOX5VCbVkolH1.png)](https://asciinema.org/a/gLGymi2DXeOTbOX5VCbVkolH1)
 
 ---
 
-## 🛠️ Built With
+## 🛠 Built With
 
-- **Python 3.10+**
-- **uv** — fast Python package manager
-- **SonarCloud** — code quality analysis
-- **GitHub Actions** — CI/CD
+Python 3.10+  
+uv  
+SonarCloud  
+GitHub Actions
 
 ---
 
 ## 👤 Author
 
-**Denwien** · [GitHub](https://github.com/Denwien)
+Denwien  
+https://github.com/Denwien
